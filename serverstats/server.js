@@ -16,6 +16,7 @@ var fs = require('fs');
 var tesseract = require('node-tesseract');
 
 
+var port = process.env.PORT || 8000;
 
 
 
@@ -477,7 +478,7 @@ else {
 // }, 20000);
 
 
-server.listen(6060||process.env.PORT, function listening() {
+server.listen(port, function listening() {
   console.log('Listening on %d', server.address().port);
 });
 
