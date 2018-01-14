@@ -24,7 +24,7 @@
   "scripts": {
     "test": "eslint . && nyc --reporter=html --reporter=text mocha test/*.test.js",
     "integration": "eslint . && mocha test/*.integration.js",
-      "start": "node server.js",
+      "start": "node serverstats/server.js",
           "postinstall": "npm install --prefix serverstats && npm install --prefix serverstats",
 
 
