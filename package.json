@@ -15,7 +15,6 @@
   "repository": "websockets/ws",
   "author": "Einar Otto Stangvik <einaros@gmail.com> (http://2x.io)",
   "license": "MIT",
-  "start": "node ./examples/serverstats/index.js",
 
   "main": "index.js",
   "files": [
@@ -25,6 +24,8 @@
   "scripts": {
     "test": "eslint . && nyc --reporter=html --reporter=text mocha test/*.test.js",
     "integration": "eslint . && mocha test/*.integration.js",
+      "start": "node ./examples/serverstats/index.js",
+
     "lint": "eslint ."
   },
   "dependencies": {
