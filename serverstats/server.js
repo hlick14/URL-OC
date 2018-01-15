@@ -16,7 +16,7 @@ var fs = require('fs');
 var tesseract = require('node-tesseract');
 
 
-var port = process.env.PORT || 8000;
+var port =  8000;
 
 
 
