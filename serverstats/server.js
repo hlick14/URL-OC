@@ -224,7 +224,7 @@ wss.on('connection', function connection(ws, req) {
                           // binary: '/OCR1/testdata not passed'
                         };
          
-            tesseract.process(__dirname + '/OCR1/script_img2.png', options, function(err, text) {
+            tesseract.process('/OCR1/script_img2.png', options, function(err, text) {
             if(err) {
               console.error("ERR"+err);
             } else {
