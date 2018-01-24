@@ -8,7 +8,8 @@
     "RFC-6455",
     "WebSocket",
     "WebSockets",
-    "real-time"
+    "real-time",
+    "OCR"
   ],
   "homepage": "https://github.com/websockets/ws",
   "bugs": "https://github.com/websockets/ws/issues",
@@ -25,7 +26,7 @@
     "test": "eslint . && nyc --reporter=html --reporter=text mocha test/*.test.js",
     "integration": "eslint . && mocha test/*.integration.js",
       "start": "node serverstats/server.js",
-          "postinstall": "npm install --prefix serverstats && npm install --prefix serverstats",
+          "postinstall": "npm install --prefix serverstats",
 
 
     "lint": "eslint ."
