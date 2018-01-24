@@ -40,7 +40,7 @@ if arglen > 1:
 	img_array = np.asarray(bytearray(r), dtype=np.uint8)
 	flags = cv2.COLOR_BGR2GRAY
 	uuuimg = cv2.imdecode(img_array, flags)
-	
+
       
 else:
 	print('No file specified!')
@@ -57,5 +57,5 @@ filename2='OCR1/script_img2.png'
 cv2.imwrite(filename2,th2)
 img = Image.open(filename2)
 
-# print(pytesseract.image_to_string(img,lang='eng', config = tessdata_dir_config))
+# print(pytesseract.image_to_string(img,lang='eng', config = tessdata_dir_config)) used in node directly
 print 'Python Finished'
