@@ -13,7 +13,7 @@ var MemoryStore = require('memorystore')(session);
 var store = new MemoryStore();
 var PythonShell = require('python-shell');
 var fs = require('fs');
-var tesseract = require('node-tesseract');
+const tesseract = require('node-tesseract');
 
 
 var port = process.env.PORT || 8000;
@@ -93,9 +93,9 @@ wss.on('connection', function connection(ws, req) {
         }
         else {
           var options = {
-                          l: 'eng',
+                          l: 'eng'
                           // psm: 6,
-                          binary: 'OCR1/testdata'
+                          // binary: 'OCR1/testdata'
                         };
          
             tesseract.process('OCR1/script_img2.png', options, function(err, text) {
