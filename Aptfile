@@ -1,8 +1,8 @@
 libcairo2-dev
-libjpeg
+libjpeg8-dev
 libpango1.0-dev
 libgif-dev
 build-essential
+libjpeg62
 g++
-http://launchpadlibrarian.net/149178897/libtiff4_3.9.7-2ubuntu1_amd64.deb
 http://http.us.debian.org/debian/pool/main/libj/libjpeg6b/libjpeg62_6b1-3+deb7u1_amd64.deb
