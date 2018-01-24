@@ -36,31 +36,26 @@ if arglen > 1:
 	print 'created image'
 
 
-	# r = open('OCR1/current.jpg','rb').read()
-	# img_array = np.asarray(bytearray(r), dtype=np.uint8)
-	# flags = cv2.COLOR_BGR2GRAY
-	# uuuimg = cv2.imdecode(img_array, flags)
-	uuuimg = cv2.imread('OCR1/current.jpg',0)
-	arg = len(uuuimg)
-	if arg > 1:
-
-	image = uuuimg;
-
-	resized = cv2.resize(image, None, fx=2, fy=2, interpolation= cv2.INTER_CUBIC)
-	gray=cv2.cvtColor(resized,cv2.COLOR_BGR2GRAY)
-	blur = cv2.blur(gray, (oddsList2[1], oddsList2[1]))
-	th2 = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, oddsList[33], NewValue)
-
-	filename2='OCR1/script_img2.png'
-	cv2.imwrite(filename2,th2)
-	img = Image.open(filename2)
-else:
-	print 'could not load the image'
-
-	# print(pytesseract.image_to_string(img,lang='eng', config = tessdata_dir_config))
-	print 'Python Finished'
+	r = open('OCR1/current.jpg','rb').read()
+	img_array = np.asarray(bytearray(r), dtype=np.uint8)
+	flags = cv2.COLOR_BGR2GRAY
+	uuuimg = cv2.imdecode(img_array, flags)
+	
       
 else:
 	print('No file specified!')
 
 
+image = uuuimg;
+
+resized = cv2.resize(image, None, fx=2, fy=2, interpolation= cv2.INTER_CUBIC)
+gray=cv2.cvtColor(resized,cv2.COLOR_BGR2GRAY)
+blur = cv2.blur(gray, (oddsList2[1], oddsList2[1]))
+th2 = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, oddsList[33], NewValue)
+
+filename2='OCR1/script_img2.png'
+cv2.imwrite(filename2,th2)
+img = Image.open(filename2)
+
+# print(pytesseract.image_to_string(img,lang='eng', config = tessdata_dir_config))
+print 'Python Finished'
