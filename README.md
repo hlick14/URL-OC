@@ -1,4 +1,4 @@
-# Node js webserver + Webscockets. Python running via python shell for image processing. Tesseract for OCR
+# Node js webserver + Webscockets. Python running via python shell for image processing. Tesseract is used for OCR
 
 ## Table of Contents
 
