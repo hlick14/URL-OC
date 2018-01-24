@@ -3,7 +3,7 @@
 ## Table of Contents
 
 ## Package Json
-Pull libraries required for nodejs
+Pulls libraries required for nodejs
 
 ## Requirments file
 
