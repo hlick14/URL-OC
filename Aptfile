@@ -1,7 +1,7 @@
 libcairo2-dev
 libjpeg8-dev
 libpango1.0-dev
-libgif-dev
+libgif
 build-essential
 libjpeg62
 g++
