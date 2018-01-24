@@ -31,12 +31,12 @@ if arglen > 1:
 	# b64file += 'data:image/jpg;base64'+ b64file
 	b64file += '=' * (-len(b64file) % 4)  # restore stripped '='s
 	imageDecoded = base64.decodestring(b64file)
-	image_result = open('OCR1/current.jpg','wb')
+	image_result = open('current.jpg','wb')
 	image_result.write(imageDecoded)
 	print 'created image'
 
 
-	r = open('OCR1/current.jpg','rb').read()
+	r = open('current.jpg','rb').read()
 	img_array = np.asarray(bytearray(r), dtype=np.uint8)
 	flags = cv2.COLOR_BGR2GRAY
 	uuuimg = cv2.imdecode(img_array, flags)
@@ -53,7 +53,7 @@ gray=cv2.cvtColor(resized,cv2.COLOR_BGR2GRAY)
 blur = cv2.blur(gray, (oddsList2[1], oddsList2[1]))
 th2 = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, oddsList[33], NewValue)
 
-filename2='OCR1/script_img2.png'
+filename2='script_img2.png'
 cv2.imwrite(filename2,th2)
 img = Image.open(filename2)
 
