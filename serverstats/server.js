@@ -95,7 +95,7 @@ wss.on('connection', function connection(ws, req) {
           var options = {
                           l: 'eng',
                           // psm: 6,
-                          binary: '/OCR1/testdata/'
+                          binary: 'OCR1/testdata/'
                         };
          
             tesseract.process('OCR1/script_img2.png', options, function(err, text) {
