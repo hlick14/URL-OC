@@ -39,7 +39,7 @@ if arglen > 1:
 	r = open('OCR1/current.jpg','rb').read()
 	img_array = np.asarray(bytearray(r), dtype=np.uint8)
 	flags = cv2.COLOR_BGR2GRAY
-	uuuimg = cv2.imdecode(".jpg", img_array)
+	uuuimg = cv2.imdecode(img_array, flags)
       
 else:
 	print('No file specified!')
