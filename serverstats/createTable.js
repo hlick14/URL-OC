@@ -14,6 +14,7 @@ var con = mysql.createConnection({
 });
 
 con.connect(function(err) {
+  //5
   // if (err) throw err;
   console.log("Connected!");
      var table2Sql = "CREATE TABLE users ( duuid VARCHAR(255),userSessionID VARCHAR(255))";
