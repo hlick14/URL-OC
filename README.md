@@ -1,7 +1,7 @@
 # Node js webserver + Webscockets. Python running via python shell for image processing. Tesseract is used for OCR
 
 ## Table of Contents
-
++Dependecies
 ## Package Json
 Pulls libraries required for nodejs
 
