@@ -33,18 +33,17 @@ if arglen > 1:
 	imageDecoded = base64.decodestring(b64file)
 	image_result = open('OCR1/current.jpg','wb')
 	image_result.write(imageDecoded)
-	print 'created iamge'
+	print 'created image'
 
 
 	r = open('OCR1/current.jpg','rb').read()
 	img_array = np.asarray(bytearray(r), dtype=np.uint8)
 	flags = cv2.COLOR_BGR2GRAY
-	uuuimg = cv2.imdecode(img_array, flags)
+	uuuimg = cv2.imdecode(".jpg", img_array)
       
 else:
 	print('No file specified!')
 
-source = 'OCR1/current.jpg'
 
 image = uuuimg;
 
