@@ -20,7 +20,7 @@ var port = process.env.PORT || 8000;
 
 
 
-// Stores currently connected users
+// Stores currently connected users  asd
 var UsersArray = [];
 
 // Stores user from pixel tracking
