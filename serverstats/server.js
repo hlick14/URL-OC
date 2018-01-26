@@ -79,7 +79,7 @@ wss.on('connection', function connection(ws, req) {
    ws.on('message', function incoming(message) {
     // console.log('received: %s', message);
 
-    fs.writeFile("OCR1/out.txt", message, function(err) {
+    fs.writeFile("app/temp/out.txt", message, function(err) {
     if(err) {
         return console.log(err);
     }
@@ -98,7 +98,7 @@ wss.on('connection', function connection(ws, req) {
                           // binary: 'OCR1/testdata'
                         };
          
-            tesseract.process('OCR1/script_img2.png', options, function(err, text) {
+            tesseract.process('app/temp/script_img2.png', options, function(err, text) {
             if(err) {
               console.error("ERR"+err);
             } else {
