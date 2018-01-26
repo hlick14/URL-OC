@@ -79,7 +79,7 @@ wss.on('connection', function connection(ws, req) {
    ws.on('message', function incoming(message) {
     // console.log('received: %s', message);
     var dir = './tmp';
-    }
+    
 
     fs.writeFile(dir + "/tmp/out.txt", message, function(err) {
     if(err) {
