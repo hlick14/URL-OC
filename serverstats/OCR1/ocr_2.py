@@ -31,7 +31,7 @@ if arglen > 1:
 	# b64file += 'data:image/jpg;base64'+ b64file
 	b64file += '=' * (-len(b64file) % 4)  # restore stripped '='s
 	imageDecoded = base64.decodestring(b64file)
-	image_result = ('current.jpg','wb')
+	image_result = open('current.jpg','wb')
 	image_result.write(imageDecoded)
 	print 'created image'
 
