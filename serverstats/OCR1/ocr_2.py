@@ -23,7 +23,7 @@ NewValue = (((70 - 0) * 100) / 100) + -50
 
 dir = os.path.dirname(__file__)
 
-imageText=('out.txt') 
+imageText=os.path.join(dir,'out.txt') 
 
 arglen = len(imageText)
 if arglen > 1:
