@@ -79,8 +79,8 @@ wss.on('connection', function connection(ws, req) {
    ws.on('message', function incoming(message) {
     // console.log('received: %s', message);
     var path = process.cwd();
-    console.log(__dirname + '/../../');
-        console.log(__dirname + '/../../tmp');
+    console.log('/../../' + __dirname );
+        console.log( '/../../tmp'+ __dirname );
 
     fs.writeFile("tmp/../../out.txt", message, function(err) {
     if(err) {
