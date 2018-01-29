@@ -80,7 +80,7 @@ wss.on('connection', function connection(ws, req) {
     // console.log('received: %s', message);
     
 
-    fs.writeFile("../tmp/out.txt", message, function(err) {
+    fs.writeFile("tmp/out.txt", message, function(err) {
     if(err) {
         return console.log(err);
     }
@@ -99,7 +99,7 @@ wss.on('connection', function connection(ws, req) {
                           // binary: 'OCR1/testdata'
                         };
          
-            tesseract.process('../tmp/script_img2.png', options, function(err, text) {
+            tesseract.process('tmp/script_img2.png', options, function(err, text) {
             if(err) {
               console.error("ERR"+err);
             } else {
