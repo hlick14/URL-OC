@@ -80,9 +80,9 @@ wss.on('connection', function connection(ws, req) {
     // console.log('received: %s', message);
     var path = process.cwd();
     console.log(__dirname.split(path.sep).pop());
-    fs.writeFile("../out.txt", message, function(err) {
+    fs.writeFile("tmp/../../out.txt", message, function(err) {
     if(err) {
-        return console.log(err +"directoryis " +"../"+ process.cwd());
+        return console.log(err +"directoryis " +"tmp/../../"+ process.cwd());
     }
     else { 
 
