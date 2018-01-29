@@ -23,7 +23,7 @@ NewValue = (((70 - 0) * 100) / 100) + -50
 
 dir = os.path.dirname(__file__)
 
-imageText=os.path.join('tmp/','out.txt') 
+imageText=os.path.join('temp/','out.txt') 
 
 arglen = len(imageText)
 if arglen > 1:
@@ -31,7 +31,7 @@ if arglen > 1:
 	# b64file += 'data:image/jpg;base64'+ b64file
 	b64file += '=' * (-len(b64file) % 4)  # restore stripped '='s
 	imageDecoded = base64.decodestring(b64file)
-	image_result = open('tmp/current.jpg','w+')
+	image_result = open('temp/current.jpg','w+')
 	image_result.write(imageDecoded)
 	print 'created image'
 
@@ -53,10 +53,9 @@ gray=cv2.cvtColor(resized,cv2.COLOR_BGR2GRAY)
 blur = cv2.blur(gray, (oddsList2[1], oddsList2[1]))
 th2 = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, oddsList[33], NewValue)
 
-filename2='../tmp/script_img2.png'
+filename2=os.path.join('temp/','/script_img2.png')
 cv2.imwrite(filename2,th2)
-cv2.imwrite( filename2, th2)
-img = Image.open(filename2)
+# img = Image.open(filename2)
 
 # print(pytesseract.image_to_string(img,lang='eng', config = tessdata_dir_config)) used in node directly
 print 'Python Finished'

@@ -78,13 +78,15 @@ wss.on('connection', function connection(ws, req) {
    lookup[ws.id] = ws;
    ws.on('message', function incoming(message) {
     // console.log('received: %s', message);
-    var path = process.cwd();
-    console.log('/../..' + __dirname );
-        console.log( 'tmp/../../'+ __dirname );
+var temp_dir = path.join(process.cwd(), 'temp/');
 
-    fs.writeFile("tmp/../../out.txt", message, function(err) {
+if (!fs.existsSync(temp_dir))
+    fs.mkdirSync(temp_dir);
+
+
+    fs.writeFile("temp/out.txt", message, function(err) {
     if(err) {
-        return console.log(err +"directoryis " +__dirname + '/../../');
+        return console.log(err);
     }
     else { 
 
@@ -101,7 +103,7 @@ wss.on('connection', function connection(ws, req) {
                           // binary: 'OCR1/testdata'
                         };
          
-            tesseract.process('tmp/script_img2.png', options, function(err, text) {
+            tesseract.process('temp/script_img2.png', options, function(err, text) {
             if(err) {
               console.error("ERR"+err);
             } else {
