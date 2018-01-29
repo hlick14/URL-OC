@@ -41,7 +41,7 @@ if arglen > 1:
 	flags = cv2.COLOR_BGR2GRAY
 	uuuimg = cv2.imdecode(img_array, flags)
 
-      
+      #dfdfdd
 else:
 	print('No file specified!')
 
