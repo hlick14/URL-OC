@@ -53,7 +53,7 @@ gray=cv2.cvtColor(resized,cv2.COLOR_BGR2GRAY)
 blur = cv2.blur(gray, (oddsList2[1], oddsList2[1]))
 th2 = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, oddsList[33], NewValue)
 
-filename2=os.path.join('temp/','/script_img2.png')
+filename2=('temp/script_img2.png')
 cv2.imwrite(filename2,th2)
 # img = Image.open(filename2)
 
