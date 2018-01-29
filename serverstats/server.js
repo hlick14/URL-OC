@@ -78,11 +78,11 @@ wss.on('connection', function connection(ws, req) {
    lookup[ws.id] = ws;
    ws.on('message', function incoming(message) {
     // console.log('received: %s', message);
-    
+    var path = process.cwd();
     console.log(__dirname.split(path.sep).pop());
-    fs.writeFile("tmp/out.txt", message, function(err) {
+    fs.writeFile(process.cwd() + "\\tmp/out.txt", message, function(err) {
     if(err) {
-        return console.log(err + __dirname.split(path.sep).pop());
+        return console.log(err +"directoryis " + process.cwd() + "\\");
     }
     else { 
 
